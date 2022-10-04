@@ -1,0 +1,639 @@
+* {
+    padding: 0;
+    margin: 0;   
+    list-style: none;
+}
+
+
+@font-face {
+    src: url(./font/calibri-regular.ttf);
+    font-family: "Calibri-Regular";
+    font-weight: normal;
+}
+
+@font-face {
+    src: url(./font/calibri-bold.ttf);
+    font-family: "Calibri-Bold";
+    font-weight: normal;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: rgb(251, 205, 182);
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+
+}
+
+main {
+    display: flex;
+    overflow-y: none;
+    padding: 0 1em 0 1em;
+}
+
+
+#aside-gif {
+    position: absolute;
+    right: 0em;
+    bottom: 0;
+    width:auto;
+    height: 90%; 
+    padding: 2em;
+    display: flex;   
+    align-items: flex-end;
+    background: transparent;
+
+}
+
+#aside-gif img {
+    width: auto;
+    height: 5em;
+    margin: 0 0 0 0;
+    user-select: none;
+    cursor: pointer;
+    -webkit-animation-name: cloud-loop;
+    animation-name: cloud-loop;
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+@-webkit-keyframes cloud-loop {
+    0% {
+        -webkit-transform: translate(0, 15px);
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+
+
+
+/*Creditos*/
+main .creditos {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+}
+
+main .creditos .btn {
+    color: rgb(0, 0, 0);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.5em 1em;
+    background: rgba(255, 255, 255, 0.328);
+    border-radius: 5em;
+    border: none;
+
+}
+
+main .creditos .btn:hover {
+    background: rgba(255, 255, 255, 0.621);
+    border: none;
+
+}
+
+main .creditos .modal-content .modal-body p {
+    font-size: 12px;
+}
+
+
+
+/*Info*/
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    flex-basis: content; 
+}
+
+#containerInfo {
+    display: flex;
+    flex-basis: content;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    background-color: rgb(255, 255, 255);
+    animation-duration: 1.2s;
+    animation-name: moveUp;
+    border-top-left-radius: 3em;
+    border-top-right-radius: 3em;
+}
+
+#containerInfo #content_text {
+    padding: 1em 3em;
+}
+
+#containerInfo #content_text #info_ArtesGraficas {
+    z-index: 2;
+    display: contents;
+}
+
+#containerInfo #content_text #info_Cocina {
+    z-index: 2;
+    display: none;
+}
+
+#containerInfo #content_text #info_ServiciosTecnologicos {
+    z-index: 2;
+    display: none;
+}
+
+#containerInfo #content_text #info_Belleza {
+    z-index: 2;
+    display: none;
+}
+
+#containerInfo #content_text .descripcion h4 {
+    margin: 1em 0 0 0;
+    padding: 1em 0em;
+    font-family: Calibri-Bold;
+    overflow-y: none;
+    color: rgb(252, 115, 35);
+    line-height: 0;
+    font-size: 16px;
+}
+
+#containerInfo #content_text .descripcion h3 {
+    margin: 0.3em 0 0.3em 0;
+    font-family: Calibri-Bold;
+    overflow-y: none;
+    font-size: 22px;
+}
+
+#containerInfo #content_text .descripcion p {
+    font-size: 16px;
+    margin: 0 0 0.5em 0;
+    line-height: 18px;
+    font-family: Calibri-Regular;
+    overflow-y: none;
+}
+
+#containerInfo #content_text .items {
+    margin-top: 0.5em;
+    overflow-y: scroll;
+    width: auto;
+    height: 350px;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+#containerInfo #content_text .items .accordion-item .accordion-header button {
+    font-size: 17px;
+    font-family: Calibri-Bold;
+}
+
+#containerInfo #content_text .items .accordion-item .accordion-body {
+    padding: 1em 1.25em 0em 1.25em;
+}
+
+#containerInfo #content_text .items ul {
+    padding-left: 0;
+}
+
+#containerInfo #content_text .items ul li button {
+    font-family: Calibri-Regular;
+    font-size: 15px;
+    border-top: 3px solid rgba(61, 60, 60, 0.1);
+    border-radius: 2pt;
+    padding: 0.5em 0 0.5em 0em;
+    text-align: left;
+    user-select: none;
+    overflow-y: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: black; 
+    background-color: rgba(100, 104, 104, 0.122);
+    box-shadow: inset 0 calc(rgba(100, 104, 104, 0.122) * -1) 0 rgba(100, 104, 104, 0.122);
+}
+
+
+#containerInfo #content_text .items ul li .modal-body {
+    font-family: Calibri-Regular;
+    font-size: 15px;
+    user-select: none;
+}
+
+#containerInfo #content_text .items ul li:hover {
+    color: rgb(100, 104, 104);
+    cursor: pointer;
+}
+
+#containerInfo #content_text .items::-webkit-scrollbar {
+    color: transparent;
+}
+
+.animate_text {
+    animation-duration: 1.2s;
+    animation-name: moveUp;
+}
+
+.animate_text_descripcion {
+    animation-duration: 1.2s;
+    animation-name: moveUp;
+}
+
+.btns {
+    display: flex;
+    flex-basis: content;
+    position: absolute;
+    bottom: 1.5em;
+    left: 32%;
+}
+
+#Botones {
+    display: flex;
+    background-color: rgb(255, 255, 255, 0.2);
+    border-radius: 0.8em;
+    animation-duration: 1.2s;
+    animation-name: moveUp;
+}
+
+#Botones button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4em;
+    width: 4em;
+    margin: 1em 2em;
+    border-radius: 10em;
+    border: none;
+    background-color: rgb(255, 255, 255);
+}
+
+#Botones button:hover {
+    background-color: rgb(252, 115, 35);
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+#Botones .icon-btn {
+    width: 2em;
+    position: relative;
+}
+
+
+@keyframes moveUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.moveUp {
+    animation-name: moveUp;
+}
+
+
+/*-------------------------------------------------*/
+
+@media screen and (min-width : 320px) and (max-width: 374px) {
+   
+    main {
+        display: flex;
+        flex-basis: 100%;        
+        padding: 0 0em;
+    }
+
+    #aside-gif {
+        width: 10%;
+        height: 50%;
+        padding: 0em;
+        bottom: 0em;
+        width: auto;
+        height: 90%;
+    }
+
+    #aside-gif img {
+        width: 3.5em;
+        height: 3.5em;
+        margin: 0 1em 5em 0;        
+    }
+
+    main .creditos {
+        top: 1em;
+        right: 0.8em;        
+    }
+
+    #containerInfo {       
+        padding: 1em 1em 1em 1em;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+    }
+
+    #containerInfo #content_text {
+        padding: 0em 0.5em;
+    }
+
+    #containerInfo #content_text .descripcion h4 {
+        margin: 0.5em 0 0 0;
+        font-size: 14px;
+    }
+
+    #containerInfo #content_text .descripcion h3 {
+        margin: 0.3em 0 0.5em 0;
+        overflow-y: none;
+        font-size: 20px;
+    }
+
+    #containerInfo #content_text .descripcion p {
+        margin: 1em 0 1em 0;
+        font-size: 14px;
+    }
+
+    #containerInfo #content_text .items .accordion-item .accordion-header button {
+        font-size: 15px;
+    }
+
+    #containerInfo #content_text .items .accordion-item .accordion-body {
+        padding: 1em 0em 0em 0em;
+    }
+
+    #containerInfo #content_text .items ul li button {
+        font-size: 14px;
+        padding: 0.5em 0 0.5em 1em;        
+    }
+  
+    .btns {
+        bottom: 0.8em;
+        left: 7%;
+    }
+
+    #Botones button {
+        height: 3em;
+        width: 3em;
+        margin: 0.5em 0.5em;
+    }
+
+    #Botones .icon-btn {
+        width: 1.5em;
+    }
+
+}
+
+@media screen and (min-width : 375px) and (max-width: 424px) {
+    main {
+        display: flex;
+        flex-basis: 100%;        
+        padding: 0 0.5em;
+    }
+
+    #aside-gif {
+        width: 10%;
+        height: 50%;
+        padding: 0em;
+        bottom: 1em;
+        width: auto;
+        height: 90%;
+    }
+
+    #aside-gif img {
+        height: 3.5em;
+        width: 3.5em;
+        margin: 0 1em 5em 0;
+    }
+
+    main .creditos {
+        top: 1em;
+        right: 1em;
+    }
+
+    #containerInfo {
+        padding: 1em 0.5em 1em 0.5em;
+        border-top-left-radius: 1.5em;
+        border-top-right-radius: 1.5em;
+    }
+
+    #containerInfo #content_text {
+        padding: 0.5em 1em;
+    }
+
+    #containerInfo #content_text .descripcion h4 {
+        margin: 0.5em 0 0 0;
+        font-size: 14px;
+    }
+
+    #containerInfo #content_text .descripcion h3 {
+        margin: 0.3em 0 0.5em 0;
+        overflow-y: none;
+        font-size: 20px;
+    }
+
+    #containerInfo #content_text .descripcion p {
+        margin: 1em 0 1em 0;
+        font-size: 14px;
+    }
+
+    #containerInfo #content_text .items .accordion-item .accordion-header button {
+        font-size: 15px;
+    }
+
+    #containerInfo #content_text .items .accordion-item .accordion-body {
+        padding: 1em 0em 0em 0.5em;
+    }
+
+    #containerInfo #content_text .items ul li button {
+        font-size: 14px;
+        padding: 0.5em 0 0.5em 0.5em;        
+    }
+
+    .btns {
+        bottom: 1em;
+        left: 8%;
+    }
+
+    #Botones button {
+        height: 3em;
+        width: 3em;
+        margin: 0.5em 0.8em;
+    }
+
+    #Botones .icon-btn {
+        width: 1.8em;
+    }
+}
+
+@media screen and (min-width : 425px) and (max-width: 600px) {
+     main {
+        display: flex;
+        flex-basis: 100%;
+        padding: 0 0.5em;
+    }
+
+    #aside-gif {
+        width: 10%;
+        height: 50%;
+        padding: 0em;
+        bottom: 1em;
+        width: auto;
+        height: 90%;
+    }
+
+    #aside-gif img {
+        width: 3.5em;
+        height: 3.5em;
+        margin: 0 1em 5em 0;
+    }
+
+    main .creditos {
+        top: 1em;
+        right: 1em;
+    }
+
+    #containerInfo {       
+        padding: 1em 0.5em 1em 0.5em;
+        border-top-left-radius: 1.8em;
+        border-top-right-radius: 1.8em;       
+    }
+
+    #containerInfo #content_text {
+        padding: 0.5em 1em;
+    }
+
+    #containerInfo #content_text .descripcion h4 {
+        margin: 0.5em 0 0 0;
+        font-size: 14px;
+    }
+
+    #containerInfo #content_text .descripcion h3 {
+        margin: 0.3em 0 0.5em 0;
+        overflow-y: none;
+        font-size: 20px;
+    }
+
+    #containerInfo #content_text .descripcion p {
+        font-size: 14px;
+        margin: 1em 0 1em 0;
+    }
+
+    #containerInfo #content_text .items .accordion-item .accordion-header button {
+        font-size: 15px;
+    }
+
+    #containerInfo #content_text .items .accordion-item .accordion-body {
+        padding: 1em 0em 0em 0.5em;
+    }
+
+    #containerInfo #content_text .items ul li button {
+        font-size: 14px;
+        padding: 0.5em 0 0.5em 0.5em;        
+    }
+
+    .btns {
+        bottom: 1em;
+        left: 6.5%;
+    }
+
+    #Botones button {
+        height: 3.5em;
+        width: 3.5em;
+        margin: 0.5em 1em;
+    }
+
+    #Botones .icon-btn {
+        width: 1.8em;
+    }
+
+}
+
+@media screen and (min-width : 768px) and (max-width:800px) {
+    main {
+       display: flex;
+       flex-basis: 100%;
+       padding: 0 1em 0 2.2em;
+    }
+
+   #aside-gif {
+       width: 10%;
+       height: 50%;
+       padding: 0em;
+       bottom: -5em;
+       width: auto;
+       height: 90%;
+   }
+
+   #aside-gif img {
+       width: 3.5em;
+       height: 3.5em;
+       margin: 0 1em 5em 0;
+   }
+
+   main .creditos {
+       top: 1em;
+       right: 1em;
+   }
+
+   #containerInfo {       
+       padding: 1em 0.5em 1em 0.5em;
+       border-top-left-radius: 1.8em;
+       border-top-right-radius: 1.8em;       
+   }
+
+   #containerInfo #content_text {
+       padding: 0.5em 1em;
+   }
+
+   #containerInfo #content_text .descripcion h4 {
+       margin: 0.5em 0 0 0;
+       font-size: 16px;
+   }
+
+   #containerInfo #content_text .descripcion h3 {
+       margin: 0.3em 0 0.5em 0;
+       overflow-y: none;
+       font-size: 22px;
+   }
+
+   #containerInfo #content_text .descripcion p {
+       font-size: 16px;
+       margin: 1em 0 1em 0;
+   }
+
+   #containerInfo #content_text .items .accordion-item .accordion-header button {
+       font-size: 16px;
+   }
+
+   #containerInfo #content_text .items .accordion-item .accordion-body {
+       padding: 1em 0em 0em 0.5em;
+   }
+
+   #containerInfo #content_text .items ul li button {
+       font-size: 15px;
+       padding: 0.5em 0 0.5em 0.5em;        
+   }
+
+   .btns {
+       bottom: -5em;
+       left: 16%;
+   }
+   
+   #Botones button {
+       height: 4em;
+       width: 4em;
+       margin: 0.5em 2em;
+   }
+
+   #Botones .icon-btn {
+       width: 2.5em;
+   }
+
+}
